@@ -4,13 +4,27 @@
 * {
   padding: 0px;
   margin: 0px; }
+  #container {
+  background: #111;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+#stats {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
 
 .banner {
   /*background-color: #341F48;*/
-  background: -moz-linear-gradient(left, #341F48 50%, #2b193c 50%);
-  background: -webkit-linear-gradient(left, #341F48 50%, #2b193c 50%);
-  background: -o-linear-gradient(left, #341F48 50%, #2b193c 50%);
-  background: linear-gradient(left, #341F48 50%, #2b193c 50%); }
+
+  background: -moz-linear-gradient(left, #8b9ba4  50%, #8b9ba4  50%);
+  background: -webkit-linear-gradient(left, #8b9ba4  50%, #8b9ba4  50%);
+  background: -o-linear-gradient(left, #8b9ba4  50%, #8b9ba4  50%);
+  background: linear-gradient(left, #8b9ba4  50%, #8b9ba4  50%); 
+  }
 
 .banner-text {
   display: table-cell;
@@ -40,7 +54,15 @@
   height: calc(100%);
   opacity: 0.15;
   top: 0px; }
-
+.line > img{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 52%;
+}
 .line:before {
   background: rgba(224, 224, 224, 0.75);
   content: '';
@@ -80,8 +102,9 @@
   font-family: 'Raleway', sans-serif;
   color: #fff;
   font-weight: 400;
+  margin-top: 22%;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: 2px;
   padding: 0px !important; }
 
@@ -128,7 +151,7 @@
     opacity: 1; } }
 .menubar {
   margin-bottom: 0px !important;
-  background-color: #c54840;
+  background-color: #304456;
   border: none !important;
   border-radius: 0px !important;
   z-index: 2; }
@@ -137,6 +160,7 @@
   padding: 24px 15px !important;
   display: inline-block;
   height: auto !important;
+  font-weight: 100;
   font-family: "roboto";
   color: #fff !important;
   font-size: 34px !important; }
@@ -145,7 +169,7 @@
   padding: 24px 15px !important;
   color: #fff;
   font-family: "Source Sans Pro",sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 1px; }
   .navstyle li a:hover, .navstyle li a:focus, .navstyle li a.active {
@@ -173,8 +197,10 @@
 .featurebox {
   margin-top: 60px; }
 
-.feature-icons img {
-  width: 100%; }
+.feature-icons i {
+  font-size: 90px;
+  color: #304456;
+}
 
 .fh-desc {
   width: 80%;
@@ -183,13 +209,14 @@
     margin: 0px !important;
     font-family: 'Raleway', sans-serif;
     font-size: 22px;
-    font-weight: 400;
+    font-weight: 100;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #242424; }
   .fh-desc p {
-    color: #888;
-    font-family: "Source Sans Pro",sans-serif;
+    color: #304456;
+    font-weight: 300;
+    font-family: "Roboto",sans-serif;
     font-size: 16px;
     margin-top: 5px;
     width: 90%; }
