@@ -1,0 +1,43 @@
+# ===============================
+# 🎨 Limpieza y control de deploy
+# ===============================
+
+# --- ARCHIVOS QUE NO DEBEN IR AL DEPLOY ---
+# (serán omitidos al crear un paquete ZIP o al hacer "git archive")
+
+/node_modules export-ignore
+/.sass-cache export-ignore
+/.vscode export-ignore
+/.idea export-ignore
+/package.json export-ignore
+/package-lock.json export-ignore
+/README.md export-ignore
+/LICENSE export-ignore
+/.gitignore export-ignore
+/.gitattributes export-ignore
+/*.log export-ignore
+/*.sql export-ignore
+/*.zip export-ignore
+/*.map export-ignore
+
+# --- SASS y build tools ---
+*.scss export-ignore
+*.map export-ignore
+/build/ export-ignore
+/src/ export-ignore
+/vendor/bin export-ignore
+
+# --- NORMALIZACIÓN DE TEXTO ---
+* text=auto eol=lf
+
+# --- ARCHIVOS BINARIOS ---
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.mp3 binary
+*.mp4 binary

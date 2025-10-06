@@ -1,0 +1,89 @@
+# ==========================================
+# 🔧 GITIGNORE PARA PROYECTO WORDPRESS
+# ==========================================
+# Mantiene el repositorio limpio y seguro.
+# Solo versiona código del tema, plugins propios y archivos personalizados.
+# ==========================================
+
+# --- SISTEMA Y EDITORES ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+*.sql
+*.zip
+*.tar.gz
+*.bak
+*.tmp
+*.swp
+
+# --- NODE / COMPILADORES ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+/dist/
+/vendor/
+/build/
+/sass-cache/
+
+# --- ARCHIVOS DE CONFIGURACIÓN LOCAL ---
+wp-config.php
+wp-config-local.php
+wp-config-sample.php
+.env
+.env.local
+.env.*.local
+
+# ==========================================
+# ⚙️ CORE DE WORDPRESS
+# ==========================================
+# No se versiona el core, solo el tema y tus desarrollos.
+wp-admin/
+wp-includes/
+
+# ==========================================
+# 🔌 PLUGINS
+# ==========================================
+# Ignorar todos los plugins externos por defecto
+wp-content/plugins/**
+# ✅ Permitir tus plugins personalizados
+!wp-content/plugins/_personalizados/
+!wp-content/plugins/_personalizados/**
+
+# ==========================================
+# 🎨 TEMAS
+# ==========================================
+# Ignorar todos los temas excepto el tuyo
+wp-content/themes/**
+!wp-content/themes/porta/
+!wp-content/themes/porta/**
+
+# --- ACF JSON (mantén sincronizados los campos personalizados del tema) ---
+!wp-content/themes/porta/acf-json/
+!wp-content/themes/porta/acf-json/**
+
+# --- MU-PLUGINS PERSONALIZADOS ---
+!wp-content/mu-plugins/
+!wp-content/mu-plugins/**
+
+# ==========================================
+# 📦 UPLOADS, BACKUPS Y CACHE
+# ==========================================
+# No versionar archivos multimedia
+wp-content/uploads/
+!wp-content/uploads/.gitkeep
+
+# Caches y backups
+wp-content/cache/
+wp-content/ai1wm-backups/
+wp-content/upgrade/
+wp-content/backups-*/
+wp-content/uploads/backwpup-*/
+
+# ==========================================
+# 💻 LOCAL / ENTORNO
+# ==========================================
+.sass-cac
