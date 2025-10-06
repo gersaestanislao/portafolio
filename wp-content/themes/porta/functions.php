@@ -13,6 +13,30 @@ add_theme_support( 'post-formats', array(
   'chat',
 ) );
 
+add_action( 'wp_enqueue_scripts', 'porta_enqueue_theme_assets' );
+
+function porta_enqueue_theme_assets() {
+  if ( ! is_singular() ) {
+    return;
+  }
+
+  wp_enqueue_script(
+    'porta-chartjs',
+    'https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js',
+    array(),
+    '4.4.1',
+    true
+  );
+
+  wp_enqueue_script(
+    'porta-metrics-charts',
+    get_template_directory_uri() . '/scripts/metrics-charts.js',
+    array( 'porta-chartjs' ),
+    filemtime( get_template_directory() . '/scripts/metrics-charts.js' ),
+    true
+  );
+}
+
 // Registro de post
 add_action('init', 'Web');
 function Web() {

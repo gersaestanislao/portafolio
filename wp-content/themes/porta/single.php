@@ -95,6 +95,10 @@ include('header.php');
             <?php endif; ?>
     </section>
 
+    <?php
+        include('components/c-metrics-donut.php');
+    ?>
+
     <?php 
         // CONTENIDO RELACIONADO
         include('components/c-related.php'); 
